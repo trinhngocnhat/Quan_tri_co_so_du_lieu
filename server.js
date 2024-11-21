@@ -72,9 +72,11 @@ app.post('/submit_form', async (req, res) => {
             <a href="/">Back to form</a>
         `);
     } catch (error) {
-        console.error('Error inserting data into the database:', error.message);
-        res.status(500).send('Error inserting data into the database.');
+        console.error('Database error:', error.message);
+        console.error('Full error details:', error);
+        res.status(500).send(`Error inserting data into the database: ${error.message}`);
     }
+
 });
 
 // Start the server
