@@ -4,39 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="import" href="admin.html">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">    
-        <h2>Phiếu Đăng Ký Hiến Máu</h2>
-        <form action="/submit_form" method="post">
-            <label for="name">Họ và Tên:</label><br>
-            <input type="text" id="name" name="name" required placeholder="nhap ho ten"><br><br>
-        
-             <label for="SDT">SDT:</label><br>
-            <input type="string" id="SDT" name="SDT" required min="1" placeholder="nhap sdt"><br><br>
+    <div class="container" id="container">
 
-            <label for="dob">Ngày tháng năm sinh:</label><br>
-            <input type="date" id="dob" name="dob" required><br><br>
-        
-            <label for="height">Chiều cao (cm):</label><br>
-            <input type="number" id="height" name="height" required min="1" placeholder="nhap chieu cao"><br><br>
-        
-            <label for="weight">Cân nặng (kg):</label><br>
-            <input type="number" id="weight" name="weight" required min="1" placeholder="nhap can nang"><br><br>
-        
-            <label for="gender">Giới tính:</label><br>
-            <select id="gender" name="gender" required >
-                <option value="male">Nam</option>
-                <option value="female">Nữ</option>
-                <option value="other">Khác</option>
-            </select><br><br>
-            
-            <label for="date">Chọn ngày hiến máu:</label><br>
-            <input type="datetime-local" id="date" name="date" required><br><br>
+        <div class="form-container register-container">
+            <form action="#">
+                <h1 class="register">Register here</h1>
+                <input type="text" placeholder="Name" required>
+                <input type="date" placeholder="Age" required>
+                <input type="number" placeholder="Weight" min="1" required>
+                <input type="number" placeholder="Height" min="1" required>
+                <input type="email" placeholder="Email" required> 
+                <input type="password" placeholder="Password" required>
+                <input type="text" placeholder="Giới tính"></input>
+                <button>Register</button>
+                <span>or use your account</span>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="lni lni-facebook"></i></a>
+                    <a href="#" class="social"><i class="lni lni-google"></i></a>
+                    <a href="#" class="social"><i class="lni lni-linkedin"></i></a>
+                </div>
+            </form>
+        </div>
+             
+        <div class="form-container login-container">
+            <form action="#">
+                <h1 class="login">Login here</h1>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <div class="content">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label>Remember me</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password</a>
+                    </div>
+                </div>
+                <button>Login</button>
+                <span>or use your account</span>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="lni lni-facebook"></i></a>
+                    <a href="#" class="social"><i class="lni lni-google"></i></a>
+                    <a href="#" class="social"><i class="lni lni-linkedin"></i></a>
+                </div>
+            </form>
+        </div>
 
-            <input type="submit" value="Đăng ký">
-        </form>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">Hello<br>Friends</h1>
+                    <p>if you have an account, login here</p>
+                    <button class="ghost" id="login">Login
+                        <i class="lni lni-arrow-left login"></i>
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">Hi</h1>
+                    <p>if you don't have an account yet, join us and start your journey</p>
+                    <button class="ghost" id="register">Register
+                        <i class="lni lni-arrow-right register"></i>
+                    </button>  
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
