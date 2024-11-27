@@ -5,9 +5,9 @@ const sql = require('mssql'); // Install with: npm install mssql
 
 // Configure SQL Server connection
 const dbConfig = {
-    user: 'TRINHNGOCNHAT',
+    user: 'root',
     password: '', // Empty if there's no password
-    server: 'localhost', // Replace with your server name
+    server: 'TRINHNGOCNHAT', // Replace with your server name
     database: 'hienmau',
     options: {
         encrypt: false, // Disable encryption if not using SSL
@@ -83,4 +83,11 @@ app.post('/submit_form', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+});
+// app.js
+const connectDB = require('./db');
+
+// Gọi hàm kết nối và truy vấn
+connectDB().then((data) => {
+    console.log("Dữ liệu từ cơ sở dữ liệu:", data);
 });
