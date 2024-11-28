@@ -1,5 +1,5 @@
 <?php
-$serverName = "DESKTOP-2Q7H1RH";
+$serverName = "TRINHNGOCNHAT";
 $database = "hienmau";
 
 try {
